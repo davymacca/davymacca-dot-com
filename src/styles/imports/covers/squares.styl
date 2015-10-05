@@ -1,0 +1,29 @@
+//
+// Cover - Squares
+// --------------------------------------------------
+
+.Squares {
+    margin-top: -140px;
+    clearfix();
+}
+
+.Squares-item {
+    width: 3%;
+    float: left;
+    margin-left: -0.502%;
+    mix-blend-mode: color-dodge; // probably won't work on older browsers, but looks cool on latest Chrome :)
+}
+
+.Squares-item--type1 { background-color: $red; }
+.Squares-item--type2 { background-color: $orange; }
+.Squares-item--type3 { background-color: $mustard; }
+.Squares-item--type4 { background-color: $green; }
+.Squares-item--type5 { background-color: $lightblue; }
+.Squares-item--type6 { background-color: $lightpurple; }
+
+@media (min-width: 480px) {
+    .Squares {
+        margin-top: $padding-base;
+    }
+}
+

@@ -1,0 +1,114 @@
+//
+// Pages
+// --------------------------------------------------
+
+.Pages {
+
+}
+
+
+.Page {
+    margin-top: 70px;
+}
+
+.Page--home {
+    background: $blue;
+}
+
+.Page--work {
+    background: $purple;
+}
+
+.Page--contact {
+    background: $darkgrey;
+}
+
+
+
+.Page-inner {
+    overflow: scroll;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    position: relative;
+}
+
+.is-active .Page-inner {
+    box-shadow: 2px 2px 7px rgba(0,0,0,0.4);
+}
+
+
+
+
+.Page-content {
+
+}
+
+
+
+
+.Page-title {
+    margin: $padding-base $padding-base 0 $padding-base;
+}
+
+.Page-subtitle {
+    margin: 0 $padding-base;
+}
+
+.Page--home .Page-title {
+    color: #fff;
+}
+.Page--home .Page-subtitle {
+    font-size: 18px;
+    span {
+        color: #fff;
+    }
+
+    strong {
+        display: block;
+        color: $yellow;
+        font-weight: normal;
+        font-size: 16px;
+    }
+}
+@media (min-width: 475px) {
+    .Page--home .Page-subtitle strong {
+        display: inline;
+        font-size: 18px;
+        text-transform: none;
+    }
+}
+
+
+
+@media (min-width: 370px) {
+    .Page--home .Page-title {
+        font-size: 48px;
+    }
+}
+
+@media (min-width: 450px) {
+    .Page--home .Page-title {
+        font-size: 60px;
+    }
+}
+@media (min-width: 690px) {
+    .Page--home .Page-title {
+        font-size: 72px;
+    }
+
+}
+
+@media (min-width: 460px) {
+    .Page--home .Page-subtitle {
+        margin-left: $padding-base + 6;
+        margin-top: -15px;
+    }
+}
+
+
+
+
+
+
+
+

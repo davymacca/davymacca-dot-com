@@ -1,0 +1,66 @@
+//
+// Cover - Triangles
+// --------------------------------------------------
+
+
+// Option 1 - inline svg elements
+.Triangles {
+    clearfix();
+}
+.Triangles svg {
+    float: left;
+    width: 16.666666667%; // 100/6
+    // opacity: 1;
+    // transition: opacity 1500ms ease-in;
+}
+
+.Triangles polyline {
+    fill: $grey;
+}
+
+.Triangles .is-active {
+    // fill: $purple;
+    // opacity: 0;
+}
+
+.Triangles svg:nth-child(n+0):nth-child(-n+42) {
+    display: none;
+}
+
+@media (min-width:420px) {
+    .Triangles svg {
+        width: 11.111111111%; // 100/9
+    }
+    .Triangles svg:nth-child(n+0):nth-child(-n+9) {
+        display: block;
+    }
+}
+
+@media (min-width:628px) {
+    .Triangles svg {
+        width: 6.25%; // 100/16
+    }
+
+    .Triangles svg:nth-child(n+0):nth-child(-n+30) {
+        display: block;
+    }
+}
+
+@media (min-width:1025px) {
+    .Triangles svg {
+        width: 5%; // 100/20
+        display: block !important;
+    }
+}
+
+
+
+// Option 2 - liner-gradient background pattern
+// TODO: this is a better option as it only uses 1 element but it appears to be imposisble
+// TODO: to line up the edges of page on the left and the right. Until this can be sorted stick with the SVG route
+// .TriangleBackground {
+//     background-image: linear-gradient(405deg, $grey 49px, transparent 50px);
+//     background-size: 71px 71px;
+//     background-repeat: repeat;
+//     height: 212px;
+// }

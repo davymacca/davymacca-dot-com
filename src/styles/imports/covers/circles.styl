@@ -1,0 +1,65 @@
+//
+// Cover - Circles
+// --------------------------------------------------
+
+.Circles {
+    margin-top: 35px;
+    padding-bottom: 83.333333333%;
+    position: relative;
+    height: 0;
+    border-top: solid $darkblue $padding-base
+    border-bottom: solid $darkblue $padding-base
+    overflow: hidden;
+}
+
+.Circles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $darkblue;
+}
+
+.Circles-item {
+    position: absolute;
+    width: 83.333333333%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $black;
+    opacity: 0.31;
+    border-radius: 50%;
+}
+
+$dist = 40%;
+
+.Circles-1 { left: - $dist; }
+.Circles-2 { left: ($dist / 5); }
+.Circles-3 { left: $dist * 1.5; }
+.Circles-4 { display: none; }
+.Circles-5 { display: none; }
+.Circles-6 { display: none; }
+
+
+
+@media (min-width:690px) {
+
+    .Circles {
+        padding-bottom: 33.333333333%;
+    }
+
+    .Circles-item {
+        width: 33.333333333%;
+    }
+
+    $dist = 12.5%;
+
+    .Circles-1 { left: - $dist; }
+    .Circles-2 { left: ($dist / 2); }
+    .Circles-3 { left: $dist * 2; }
+    .Circles-4 { left: $dist * 3.5;  display: block; }
+    .Circles-5 { left: $dist * 5;    display: block; }
+    .Circles-6 { left: $dist * 6.5;  display: block; }
+
+}

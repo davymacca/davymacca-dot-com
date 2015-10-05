@@ -1,0 +1,93 @@
+//
+// Navigation
+// --------------------------------------------------
+
+
+.Nav {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    z-index: 2;
+    background: $white;
+}
+
+.Nav-menu {
+    margin-top: 10px;
+
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    position: relative;
+    // background: rgba($black, 0.1);
+    border-radius: 50%;
+
+    // hide the font
+    font-size: 0;
+    line-height: 0;
+    text-decoration: none;
+
+    &:hover span,
+    &:hover:before,
+    &:hover:after {
+        background: rgba($black, 0.5);
+
+    }
+
+    span,
+    &:before,
+    &:after {
+        height: 3px;
+        width: 30px;
+        display: block;
+        position: absolute;
+        top: 16px;
+        left: 10px;
+        content: '';
+        background: rgba($black, 0.2);
+        transition: background 200ms ease-in;
+    }
+
+    &:after {
+        top: 23px;
+    }
+
+    span {
+        top: 30px;
+    }
+}
+
+
+
+// Sub Navigation
+.Nav-sub {
+    margin-top: 85px; // TODO: needs to change based on breakpoints
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+}
+
+.Nav-sub-item {
+    margin: 0 $padding-base;
+    display: inline-block;
+}
+
+.Nav-sub-item-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 1px;
+}
+
+.is-active.Nav-sub-item-link--home {
+    border-bottom: solid 1px $blue;
+}
+.is-active.Nav-sub-item-link--work {
+    border-bottom: solid 1px $purple;
+}
+.is-active.Nav-sub-item-link--contact {
+    border-bottom: solid 1px $darkgrey;
+}

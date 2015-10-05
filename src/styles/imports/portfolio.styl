@@ -1,0 +1,91 @@
+//
+// Portfolio - Work
+// --------------------------------------------------
+
+.Watermark {
+    width: 100%;
+    height: 338px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    text-align: right;
+    font-size: 300px;
+    font-weight: bold;
+    letter-spacing: -29px;
+    color: $darkpurple;
+    z-index: -1;
+}
+
+
+// list of portfolio links
+.Portfolio {
+    margin: 0;
+    padding: $padding-base * 4;
+    width: 30%;
+    float: left;
+}
+
+.Portfolio-item {
+    margin-bottom: 10px;
+    font-size: 18px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover .Portfolio-item-link {
+        color: $white;
+        background: $darkpurple;
+    }
+}
+
+.Portfolio-item-link.is-active {
+    color: $white;
+    background: $darkpurple;
+}
+
+.Portfolio-item-link {
+    padding: 5px 10px;
+    color: $grey;
+    text-decoration: none;
+}
+
+
+
+
+// Portfolio details display
+.Portfolio-details {
+    margin-left: 30%;
+    width: 70%;
+    position: relative;
+    font-size: 18px;
+    color: $grey;
+}
+
+.Portfolio-details-item {
+    padding: $padding-base * 4;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.Portfolio-details-title,
+.Portfolio-details-description {
+    margin: 0 0 9px 0;
+    font-weight: normal;
+    font-size: inherit;
+}
+
+.Portfolio-details-action a {
+    color: $grey;
+    margin-right: $padding-base;
+}
+
+
+
+
+
+
