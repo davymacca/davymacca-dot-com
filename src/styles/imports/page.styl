@@ -26,10 +26,13 @@
 
 
 .Page-inner {
+    position: relative;
     overflow: scroll;
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
-    position: relative;
+
+    // allows momentum/smooth scrolling on iOS devices
+    -webkit-overflow-scrolling: touch;
 }
 
 .is-active .Page-inner {
