@@ -157,7 +157,6 @@ var AppView = function () {
     setupCarosuel();
     setupMenu();
     setupClickEvents();
-    portfolio();
     squares();
 
 
@@ -208,10 +207,7 @@ var AppView = function () {
     changeSvgClass(); // run once before the first interval fires
 
 
-
-
-
-
+    portfolio();
 
 
 };
