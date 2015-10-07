@@ -9,11 +9,11 @@
                 index: SRC_FOLDER + '/index.html',
                 assets: [SRC_FOLDER + '/assets/**/*', '!' + SRC_FOLDER + '/assets/images/**/*'],
                 images: SRC_FOLDER + '/assets/images/**/*',
-                scripts: SRC_FOLDER + '/modules/**/*.js',
+                scripts: SRC_FOLDER + '/scripts/**/*.js',
                 styles: SRC_FOLDER + '/styles/main.styl',
                 stylesGlob: SRC_FOLDER + '/styles/**/*.styl',
                 livereload: [BUILD_FOLDER + '/**/*', '!' + BUILD_FOLDER + '/assets/**/*'],
-                modules: './' + SRC_FOLDER + '/modules/app.js'
+                modules: './' + SRC_FOLDER + '/scripts/app.js'
             },
             dest: {
                 build: {
