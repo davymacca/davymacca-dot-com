@@ -195,13 +195,13 @@ var Navigation = function () {
 
 
 
-    // Public
+    // ::: Public
     this.resize = function () {
         resizePage();
     };
 
 
-
+    // Let's begin
     init();
 };
 
