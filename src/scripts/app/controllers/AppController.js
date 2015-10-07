@@ -6,17 +6,17 @@
 var $ = require('jquery');
 var owl = require('owlcarousel');
 var velocity = require('velocity');
-var portfolio = require('./../../portfolio');
 var squares = require('./../../squares');
 
 var Navigation = require('./../modules/Navigation');
 var debounce = require('./../modules/debounce');
+var Portfolio = require('./../views/Portfolio');
 
 
 // ----------------------------------------------------------------------------
-// AppView
+// AppController
 //
-var AppView = function () {
+var AppController = function () {
 
 
 
@@ -28,7 +28,7 @@ var AppView = function () {
     }, 250));
 
 
-    // setup specific pages
+
 
 
 
@@ -83,7 +83,8 @@ var AppView = function () {
     changeSvgClass(); // run once before the first interval fires
 
 
-    portfolio();
+    // setup specific pages
+    var portfolio = new Portfolio();
 
 
 };
@@ -92,4 +93,4 @@ var AppView = function () {
 // ----------------------------------------------------------------------------
 // exports
 //
-module.exports = new AppView();
+module.exports = new AppController();
