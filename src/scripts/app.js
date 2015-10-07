@@ -4,5 +4,5 @@
 
     // And so it begins...
     $(function () {
-        var app = require('./views/AppView');
+        var app = require('./app/controllers/AppController.js');
     });
