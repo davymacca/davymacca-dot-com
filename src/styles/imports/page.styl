@@ -28,6 +28,7 @@
 .Page-inner {
     position: relative;
     overflow: scroll;
+    min-height: 100%;
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
 
@@ -36,6 +37,7 @@
 }
 
 .is-active .Page-inner {
+    overflow: hidden;
     box-shadow: 2px 2px 7px rgba(0,0,0,0.4);
 }
 
