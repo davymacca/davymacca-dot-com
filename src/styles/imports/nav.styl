@@ -8,31 +8,32 @@
     width: 100%;
     position: fixed;
     text-align: center;
-    z-index: 2;
     background: $white;
+    z-index: 2;
 }
 
-.Nav-menu {
-    margin-top: 10px;
 
+.Nav-menu {
+    display: block;
+    height: 70px;
+
+    &:hover .Nav-menu-icon span,
+    &:hover .Nav-menu-icon:before,
+    &:hover .Nav-menu-icon:after {
+        background: rgba($black, 0.5);
+    }
+}
+
+.Nav-menu-icon {
+    margin-top: 10px;
+    display: inline-block;
     height: 50px;
     width: 50px;
-    display: inline-block;
     position: relative;
-    // background: rgba($black, 0.1);
-    border-radius: 50%;
-
     // hide the font
     font-size: 0;
     line-height: 0;
     text-decoration: none;
-
-    &:hover span,
-    &:hover:before,
-    &:hover:after {
-        background: rgba($black, 0.5);
-
-    }
 
     span,
     &:before,
@@ -58,10 +59,9 @@
 }
 
 
-
 // Sub Navigation
 .Nav-sub {
-    margin-top: 48px;
+    margin-top: 38px;
     width: 100%;
     position: absolute;
     z-index: 2;
@@ -71,12 +71,12 @@
 // because the page is based on a scale size - you never really know where the subNav distance should be
 @media(min-height: 600px) {
     .Nav-sub {
-        margin-top: 65px;
+        margin-top: 55px;
     }
 }
 @media(min-height: 800px) {
     .Nav-sub {
-        margin-top: 85px;
+        margin-top: 75px;
     }
 }
 
