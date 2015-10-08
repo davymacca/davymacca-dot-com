@@ -32,5 +32,8 @@
     "owlcarousel": "./src/assets/bower_components/owlcarousel2/dist/owl.carousel.js",
     "velocity": "./src/assets/bower_components/velocity/velocity.js"
   },
-  "browserify-shim": {}
+  "browserify-shim": {},
+  "dependencies": {
+    "gulp-util": "~3.0.6"
+  }
 }
