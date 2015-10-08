@@ -25,6 +25,7 @@ var Portfolio = function () {
         triangles = new Triangles('.js-triangles');
         overlay = new Overlay('.js-overlay');
 
+        positionWatermark();
         events();
     };
 
@@ -49,6 +50,18 @@ var Portfolio = function () {
 
     };
 
+    var positionWatermark = function () {
+
+        // The watermark needs to sit at the bottom of each page (for aesthetics)
+        // with all the scaling, scrolling and all that jazz it needs doing with JS :(
+
+        var $page = $('#work').find('.js-page');
+        var pageHeight = $page.height();
+        var pageScrollHeight = $page[0].scrollHeight;
+
+        $('.js-watermark').css('bottom', -(pageScrollHeight - pageHeight));
+
+    };
 
 
     // Let's begin
