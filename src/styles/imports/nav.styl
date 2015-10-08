@@ -61,12 +61,23 @@
 
 // Sub Navigation
 .Nav-sub {
-    margin-top: 85px; // TODO: needs to change based on breakpoints
+    margin-top: 48px;
     width: 100%;
     position: absolute;
     z-index: 2;
     text-align: center;
     opacity: 0;
+}
+// because the page is based on a scale size - you never really know where the subNav distance should be
+@media(min-height: 600px) {
+    .Nav-sub {
+        margin-top: 65px;
+    }
+}
+@media(min-height: 800px) {
+    .Nav-sub {
+        margin-top: 85px;
+    }
 }
 
 .Nav-sub-item {
