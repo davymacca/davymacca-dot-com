@@ -72,6 +72,13 @@ var Portfolio = function () {
     };
 
 
+    // ::: Public
+    this.resize = function () {
+        // resize the overlay to fit the screen
+        overlay.resize();
+    };
+
+
     // Let's begin
     init();
 

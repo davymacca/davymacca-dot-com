@@ -105,6 +105,10 @@ var Overlay = function (element) {
         }
     };
 
+    this.resize = function () {
+        resize();
+    };
+
 
 
     // Let's begin

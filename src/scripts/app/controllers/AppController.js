@@ -15,17 +15,14 @@ var debounce = require('./../modules/debounce');
 //
 var AppController = function () {
 
-    // setup the Navigation
     var nav = new Navigation();
+    var portfolio = new Portfolio();
+    var contact = new Contact();
 
     $(window).on('resize', debounce(function () {
         nav.resize();
+        portfolio.resize();
     }, 250));
-
-
-    // setup specific pages
-    var portfolio = new Portfolio();
-    var contact = new Contact();
 
 };
 
