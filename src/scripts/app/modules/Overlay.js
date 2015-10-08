@@ -7,7 +7,6 @@ var $ = require('jquery');
 var velocity = require('velocity');
 
 
-
 // ----------------------------------------------------------------------------
 // Overlay
 //

@@ -4,25 +4,25 @@
 // Imports
 //
 var $ = require('jquery');
-var velocity = require('velocity');
 var Overlay = require('./../modules/Overlay');
-
+var Triangles = require('./../modules/Triangles');
 
 
 // ----------------------------------------------------------------------------
-// AppView
+// Portfolio - creates the portfolio list and overlay
 //
 var Portfolio = function () {
 
 
     // ::: Private
     var $portfolio = $('.js-portfolio');
-    var overlay;
+    var overlay, triangles;
 
 
 
     var init = function () {
-        // setup the overlay first
+
+        triangles = new Triangles('.js-triangles');
         overlay = new Overlay('.js-overlay');
 
         events();

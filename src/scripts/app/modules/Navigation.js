@@ -8,7 +8,6 @@ var owl = require('owlcarousel');
 var velocity = require('velocity');
 
 
-
 // ----------------------------------------------------------------------------
 // Navigation
 //
@@ -111,7 +110,7 @@ var Navigation = function () {
             $subNav.find('[data-section="' + index + '"]').addClass('is-active');
         }
 
-    }
+    };
 
     var resizePage = function () {
 
@@ -183,7 +182,7 @@ var Navigation = function () {
             }
 
         });
-    }
+    };
 
     var whenMenuOpenAnimationIsComplete = function () {
         // do something
