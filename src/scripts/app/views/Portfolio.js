@@ -6,6 +6,7 @@
 var $ = require('jquery');
 var Overlay = require('./../modules/Overlay');
 var Triangles = require('./../modules/Triangles');
+var Lightbox = require('./../modules/Lightbox');
 
 
 // ----------------------------------------------------------------------------
@@ -16,7 +17,8 @@ var Portfolio = function () {
 
     // ::: Private
     var $portfolio = $('.js-portfolio');
-    var overlay, triangles;
+    var $portfolioDetails = $('.js-portfolio-details');
+    var overlay, triangles, lightbox;
 
 
 
@@ -24,6 +26,7 @@ var Portfolio = function () {
 
         triangles = new Triangles('.js-triangles');
         overlay = new Overlay('.js-overlay');
+        lightbox = new Lightbox();
 
         positionWatermark();
         events();
@@ -38,12 +41,17 @@ var Portfolio = function () {
             setActiveDetailsState(id);
         });
 
+        $portfolioDetails.on('click', '.js-image-preview', function (event) {
+            event.preventDefault();
+            lightbox.open($(this).prop('href'));
+        });
+
     };
 
     var setActiveDetailsState = function (id) {
 
         // simple show and hide of the portfolio details
-        $('.js-portfolio-item').removeClass('is-active');
+        $portfolioDetails.removeClass('is-active');
         $('#' + id).addClass('is-active');
 
         overlay.show();
