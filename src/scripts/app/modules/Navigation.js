@@ -22,6 +22,7 @@ var Navigation = function () {
     var $subNav = $('.js-sub-nav');
     var $carousel = $('.owl-carousel');
     var $pagesContainer = $('.js-pages');
+    var pages = ['home', 'portfolio', 'contact'];
 
 
 
@@ -122,7 +123,13 @@ var Navigation = function () {
     };
 
     var whenPageHasChanged = function (event) {
-        subNav.setActiveState(event.item.index);
+
+        var index = event.item.index;
+
+        subNav.setActiveState(index);
+
+        // when page changes set that class on the body
+        $('body')[0].className = pages[index];
     };
 
     var mainMenuClickEvents = function () {

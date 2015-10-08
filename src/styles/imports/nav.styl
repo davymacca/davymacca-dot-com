@@ -16,11 +16,28 @@
 .Nav-menu {
     display: block;
     height: 70px;
+}
 
+// When you roll over the top bar the menu icon changes colour depending on the page
+.home .Nav-menu {
     &:hover .Nav-menu-icon span,
     &:hover .Nav-menu-icon:before,
     &:hover .Nav-menu-icon:after {
-        background: rgba($black, 0.5);
+        background: $blue;
+    }
+}
+.portfolio .Nav-menu {
+    &:hover .Nav-menu-icon span,
+    &:hover .Nav-menu-icon:before,
+    &:hover .Nav-menu-icon:after {
+        background: $purple;
+    }
+}
+.contact .Nav-menu {
+    &:hover .Nav-menu-icon span,
+    &:hover .Nav-menu-icon:before,
+    &:hover .Nav-menu-icon:after {
+        background: $darkgrey;
     }
 }
 
