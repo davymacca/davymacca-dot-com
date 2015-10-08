@@ -51,7 +51,7 @@ var Portfolio = function () {
     var setActiveDetailsState = function (id) {
 
         // simple show and hide of the portfolio details
-        $portfolioDetails.removeClass('is-active');
+        $('.js-portfolio-item').removeClass('is-active');
         $('#' + id).addClass('is-active');
 
         overlay.show();
