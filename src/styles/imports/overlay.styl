@@ -1,0 +1,58 @@
+//
+// Overlay - used on the portfolio items
+// --------------------------------------------------
+
+.Overlay {
+    padding: $padding-base;
+    width: 100%;
+    background: $darkpurple;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+}
+.Overlay.slide-up-down {
+    display: none;
+    transform: translateX(0) translateY(100%);
+}
+
+.Overlay-close {
+    height: 48px;
+    width: 48px;
+    display: block;
+    position: absolute;
+    right: $padding-base;
+    transform: rotate(45deg);
+    transition: transform 150ms ease-in;
+
+    // hide the font
+    font-size: 0;
+    line-height: 0;
+    text-decoration: none;
+
+    &:after,
+    &:before {
+        position: absolute;
+        top: 24px;
+        left: 0;
+        content: '';
+        display: block;
+        width: 48px;
+        height: 2px;
+        background: $grey;
+    }
+
+    &:before {
+        top: 23px;
+        transform: rotate(90deg);
+    }
+
+    &:hover {
+        transform: rotate(135deg);
+    }
+}
+
+
+
+
