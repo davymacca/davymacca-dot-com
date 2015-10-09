@@ -16,7 +16,7 @@ module.exports = gulp.task('styles', function () {
     return gulp.src(global.config.paths.src.styles)
         .pipe(sourcemaps.init())
         .pipe(gulpif(global.release, stylus({ use: [nib()], compress: true, 'include css': true}), stylus({ use: [nib()], 'include css': true}) ))
-        .pipe(sourcemaps.write('./')) // TODO: use external sourcemaps
+        .pipe(gulpif(!global.release, sourcemaps.write('./'))) // TODO: use external sourcemaps
         .pipe(rename(fileName))
         .pipe(gulp.dest(path))
         .pipe(livereload());
