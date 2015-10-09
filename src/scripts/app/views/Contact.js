@@ -3,7 +3,6 @@
 // ----------------------------------------------------------------------------
 // Imports
 //
-var $ = require('jquery');
 var Squares = require('./../modules/Squares');
 
 

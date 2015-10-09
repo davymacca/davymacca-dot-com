@@ -64,7 +64,7 @@ var Lightbox = function () {
 
     // ::: Public
     this.open = function (path) {
-        openBox(path)
+        openBox(path);
     };
 
     this.close = function () {

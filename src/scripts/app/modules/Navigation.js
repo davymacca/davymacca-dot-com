@@ -135,8 +135,8 @@ var Navigation = function () {
     var mainMenuClickEvents = function () {
 
         // Main Menu button click
-        $nav.on('click', '.js-menu-button', function (e) {
-            e.preventDefault();
+        $nav.on('click', '.js-menu-button', function (event) {
+            event.preventDefault();
 
             // Toggle the menu open and closed
             isMenuOpen = !isMenuOpen;

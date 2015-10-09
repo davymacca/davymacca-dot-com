@@ -82,7 +82,7 @@ var Triangles = function (selector) {
         }
 
         // Show the element
-        showTriangle($activeElement, function  () {
+        showTriangle($activeElement, function () {
             $activeElement = $el;
             // hide the current element
             hideTriangle($activeElement);
