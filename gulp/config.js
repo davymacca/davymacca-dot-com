@@ -38,8 +38,8 @@
                 scripts: 'scripts.js'
             },
             release: {
-                styles: 'styles.min.css',
-                scripts: 'scripts.min.js'
+                styles: 'styles.{HASH}.min.css',
+                scripts: 'scripts.{HASH}.min.js'
             }
         },
         ports: {
