@@ -11,8 +11,8 @@ module.exports = gulp.task('default', function () {
 
             runSequence(
                 'clean',
-                ['index', 'styles', 'images', 'assets', 'lint'],
                 'browserify',
+                ['index', 'styles', 'images', 'assets', 'lint'],
                 ['minify', 'server']
             );
         } else {
